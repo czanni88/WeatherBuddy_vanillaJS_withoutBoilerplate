@@ -1,0 +1,223 @@
+.forecastContainer {
+  display: none;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.forecastContainer .weatherHeadline {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  border-radius: 1.5rem;
+}
+.forecastContainer .weatherHeadline h2 {
+  font-size: 1.5rem;
+  padding: 1rem 1rem 0rem 1rem;
+}
+.forecastContainer .weatherHeadline .newSearchButtonContainer {
+  text-align: center;
+  margin: 0.25rem;
+}
+.forecastContainer .weatherHeadline button {
+  font-size: 0.8rem;
+  background-color: lightblue;
+  color: darkred;
+  margin: 0.25rem;
+}
+.forecastContainer .weatherDetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  height: 100%;
+  border-radius: 1.5rem;
+  background-color: rgba(0, 0, 128, 0.55);
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 20rem;
+  overflow: auto;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 18rem;
+  max-width: 18rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(173, 216, 230, 0.85);
+  border-radius: 1.5rem;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay div.descriptionWithImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0.25rem;
+  margin: 0.5rem 0rem;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay div.descriptionWithImage p {
+  margin: 0rem 0rem 0rem 1rem;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay div.descriptionWithImage img {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 0.5rem;
+  background-color: aqua;
+  border-radius: 0.375rem;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay .temp {
+  padding: 0rem 3rem;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay p {
+  text-align: center;
+  margin: 0.5rem 0rem 0rem 0rem;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay span.alert {
+  font-weight: bold;
+  color: darkred;
+}
+.forecastContainer .weatherDetailsContainer .weatherDailyDetails .infoByDay span.bold {
+  font-weight: bold;
+}
+
+.itemsListContainer {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 2rem 0rem;
+  padding: 0rem 1rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  border-radius: 1.5rem;
+}
+.itemsListContainer h2 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+.itemsListContainer li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 1rem;
+  padding-left: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+@media (min-width: 620px) {
+  .itemsListContainer {
+    flex: 1 1 40vw;
+  }
+}
+.searchInputField {
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 0.375rem;
+}
+
+button {
+  margin: 1rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: darkgreen;
+}
+
+.deleteButton,
+.clearButton {
+  color: lightblue;
+  background-color: darkred;
+  margin: 0.5rem;
+}
+
+root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  min-height: 100vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0rem;
+  backdrop-filter: blur(4px);
+}
+
+.searchFormContainer {
+  width: 100%;
+  text-align: center;
+}
+.searchFormContainer h2 {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.searchInputFieldPeriodContainer {
+  margin-top: 1rem;
+}
+.searchInputFieldPeriodContainer .searchPeriodLabel {
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+}
+.searchInputFieldPeriodContainer .searchInputFieldPeriod {
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  background-color: white;
+}
+
+@media (min-width: 620px) {
+  .searchResultContainer {
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .forecastContainer {
+    margin-top: 0rem;
+    margin-right: 1rem;
+  }
+
+  .itemsListContainer {
+    margin: 0rem;
+    max-width: 20rem;
+  }
+
+  .overflowItemsListContainer {
+    height: 19rem;
+    overflow: auto;
+  }
+}

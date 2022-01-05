@@ -1,0 +1,98 @@
+@import "./abstracts/_variables.scss";
+
+.forecastContainer {
+  display: none;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  .weatherHeadline {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba($color-basic, 0.25);
+    backdrop-filter: blur(6px);
+    border-radius: $border-radius-medium;
+    h2 {
+      font-size: $font-size-medium;
+      padding: 1rem 1rem 0rem 1rem;
+    }
+    .newSearchButtonContainer {
+      text-align: center;
+      margin: 0.25rem;
+    }
+    button {
+      font-size: $font-size-small;
+      background-color: $color-secondary;
+      color: $color-alert;
+      margin: 0.25rem;
+    }
+  }
+  .weatherDetailsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: 100%;
+    border-radius: $border-radius-medium;
+    background-color: rgba($color-primary, 0.55);
+
+    .weatherDailyDetails {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 20rem;
+      overflow: auto;
+
+      .infoByDay {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 18rem;
+        max-width: 18rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background-color: rgba($color-secondary, 0.85);
+        border-radius: $border-radius-medium;
+
+        div.descriptionWithImage {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0rem 0.25rem;
+          margin: 0.5rem 0rem;
+          p {
+            margin: 0rem 0rem 0rem 1rem;
+          }
+
+          img {
+            width: 5rem;
+            height: 5rem;
+            margin-left: 0.5rem;
+            background-color: aqua;
+            border-radius: $border-radius-light;
+          }
+        }
+        .temp {
+          padding: 0rem 3rem;
+        }
+        p {
+          text-align: center;
+          margin: 0.5rem 0rem 0rem 0rem;
+        }
+        span.alert {
+          font-weight: bold;
+          color: $color-alert;
+        }
+        span.bold {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// @media (min-width: 620px) {
+//   .forecastContainer {
+//     flex: 1 1 40vw;
+//   }
+// }

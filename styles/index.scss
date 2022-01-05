@@ -1,0 +1,88 @@
+@import "./_weather.scss";
+@import "./_items.scss";
+@import "./_globalElements.scss";
+@import "./abstracts/_variables.scss";
+
+root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: $font-size-regular;
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  min-height: 100vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-size: $font-size-large;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0rem;
+    backdrop-filter: blur(4px);
+  }
+}
+
+.searchFormContainer {
+  width: 100%;
+  text-align: center;
+
+  h2 {
+    font-size: $font-size-medium;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: $border-radius-regular;
+    backdrop-filter: blur(4px);
+  }
+}
+
+.searchInputFieldPeriodContainer {
+  margin-top: 1rem;
+  .searchPeriodLabel {
+    padding: 0.25rem;
+    border-radius: $border-radius-light;
+    background-color: rgba($color-basic, 0.35);
+    backdrop-filter: blur(6px);
+  }
+
+  .searchInputFieldPeriod {
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    background-color: white;
+  }
+}
+
+@media (min-width: 620px) {
+  .searchResultContainer {
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+  .forecastContainer {
+    margin-top: 0rem;
+    margin-right: 1rem;
+  }
+  .itemsListContainer {
+    margin: 0rem;
+    max-width: 20rem;
+  }
+  .overflowItemsListContainer {
+    height: 19rem;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,22 @@
+@import "./abstracts/_variables.scss";
+
+.searchInputField {
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: $border-radius-light;
+}
+
+button {
+  margin: 1rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  color: $color-basic;
+  background-color: $color-actionCall;
+}
+
+.deleteButton,
+.clearButton {
+  color: $color-secondary;
+  background-color: $color-alert;
+  margin: 0.5rem;
+}

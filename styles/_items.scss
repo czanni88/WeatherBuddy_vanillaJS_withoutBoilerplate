@@ -1,0 +1,36 @@
+@import "./abstracts/_variables.scss";
+
+.itemsListContainer {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 2rem 0rem;
+  padding: 0rem 1rem;
+  background-color: rgba($color-basic, 0.25);
+  backdrop-filter: blur(6px);
+  border-radius: $border-radius-medium;
+
+  h2 {
+    font-size: $font-size-medium;
+    padding-top: 1rem;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 1rem;
+    padding-left: 1rem;
+    border: 1px solid black;
+    border-radius: $border-radius-regular;
+    background-color: rgba($color-basic, 0.55);
+  }
+}
+
+@media (min-width: 620px) {
+  .itemsListContainer {
+    flex: 1 1 40vw;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Weather Buddy</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="mainHeader">
+        Check the weather and make a checklist of items to be packed
+      </h1>
+
+      <div class="searchFormContainer">
+        <h2>Where are you going to?</h2>
+        <form class="searchForm">
+          <input
+            class="searchInputField"
+            type="text"
+            name="locationSearch"
+            placeholder="Enter the city name"
+          />
+
+          <div class="containerSearchInputFieldPeriod">
+            <label for="period" class="searchPeriodLabel"> I will stay: </label>
+            <select class="searchInputFieldPeriod" name="period" id="period">
+              <option value="1">One day</option>
+              <option value="2">Two days</option>
+              <option value="3">Three days</option>
+              <option value="4">Four days</option>
+              <option value="5">Five days</option>
+              <option value="6">Six days</option>
+              <option value="7">Seven days</option>
+              <option value="8">Eight days</option>
+            </select>
+            <button type="submit">Go</button>
+          </div>
+        </form>
+      </div>
+      <div class="searchResultContainer">
+        <div class="forecastContainer">
+          <div class="weatherHeadline">
+            <!--To be inserted by DOM manipulation-->
+          </div>
+          <div class="weatherDetailsContainer">
+            <div class="weatherDailyDetails">
+              <!-- To be inserted by DOM manipulation-->
+            </div>
+          </div>
+        </div>
+
+        <div class="itemsListContainer">
+          <h2>What should you take with you?</h2>
+          <button class="suggestionButton">Generate suggestions</button>
+          <form>
+            <input
+              class="searchInputField addItemInputField"
+              type="text"
+              name="addItems"
+              id="addItems"
+              placeholder="Include in your Checklist"
+            />
+
+            <button type="submit">Add Item</button>
+            <button class="clearButton" type="button">Clear List</button>
+          </form>
+          <div class="overflowItemsListContainer">
+            <ul class="itemsList"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>
